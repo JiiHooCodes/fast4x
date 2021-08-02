@@ -5,15 +5,21 @@ using Fast4XCore;
 
 public class UnityMain : MonoBehaviour
 {
+    Fast4XCore.Main game;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        game = new Main();
+        if (game.planet != null)
+        {
+            GameObject planet = new GameObject("planet");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

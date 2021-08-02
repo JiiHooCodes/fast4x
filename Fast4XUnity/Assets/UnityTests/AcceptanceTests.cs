@@ -4,23 +4,22 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
+// Please note: In [UnityTest]-tests we can use 'yield return' in front of game.refresh() to wait for Unity to set everything up, before we can query most things. And I haven't been able to find any syntactic sugar to make it nicer.
+
 public class AcceptanceTests
 {
-    // A Test behaves as an ordinary method
-    [Test]
-    public void AcceptanceTestsSimplePasses()
+    GameRunner game;
+    [UnitySetUp]
+    public IEnumerator Setup()
     {
-        // Use the Assert class to test conditions
-        
+        game = new GameRunner();
+        game.start();
+        yield return game.refresh();
+    }
+    [Test]
+    public void WhenGameHasStartedThereIsAPlanetWithPopulation()
+    {
+        game.hasAPlanetWithPopulation();
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator AcceptanceTestsWithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
-    }
 }

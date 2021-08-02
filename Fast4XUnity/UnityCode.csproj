@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UnityMain.cs" />
+    <Compile Include="Assets\Scripts\PlanetData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UnityCode.asmdef" />
@@ -296,14 +297,14 @@
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.7.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
+    <Reference Include="Core">
+      <HintPath>Assets\CoreDLL\Core.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.7.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Core">
-      <HintPath>Assets\CoreDLL\Core.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Program Files\Unity\2020.3.15f2\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
