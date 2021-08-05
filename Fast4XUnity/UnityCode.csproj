@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\UnityMain.cs" />
     <Compile Include="Assets\Scripts\PlanetData.cs" />
+    <Compile Include="Assets\Scripts\Factories\PlanetFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UnityCode.asmdef" />

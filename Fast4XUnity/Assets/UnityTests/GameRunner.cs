@@ -19,7 +19,7 @@ internal class GameRunner
         GameObject planet = GameObject.Find("planet");
         Assert.That(planet, Is.Not.Null);
 
-        int population = planet.GetComponent<Planet>().getPopulation();
+        int population = planet.GetComponent<PlanetData>().getPopulation();
         Assert.That(population, Is.GreaterThan(0));
     }
 

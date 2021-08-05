@@ -13,7 +13,7 @@ public class UnityMain : MonoBehaviour
         game = new Main();
         if (game.planet != null)
         {
-            GameObject planet = new GameObject("planet");
+            PlanetFactory.createPlanet();
         }
     }
 

@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet: MonoBehaviour
+public class PlanetData : MonoBehaviour
 {
     private int population;
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -20,5 +20,10 @@ public class Planet: MonoBehaviour
     public int getPopulation()
     {
         return population;
+    }
+    public void setInitialPopulation(int pop)
+    {
+        if (population == 0)
+            population = pop;
     }
 }

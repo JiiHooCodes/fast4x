@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\UnityTests\AcceptanceTests.cs" />
     <Compile Include="Assets\UnityTests\GameRunner.cs" />
+    <Compile Include="Assets\UnityTests\PlanetFactoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityTests\UnityTests.asmdef" />
