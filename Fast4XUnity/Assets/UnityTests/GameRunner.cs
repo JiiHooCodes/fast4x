@@ -14,17 +14,22 @@ internal class GameRunner
         script = mainObject.AddComponent<UnityMain>();
     }
 
-    internal void hasAPlanetWithPopulation()
+    internal void hasAPlanetWithPopulation(double expectedPopulation)
     {
         GameObject planet = GameObject.Find("planet");
         Assert.That(planet, Is.Not.Null);
 
         int population = planet.GetComponent<PlanetData>().getPopulation();
-        Assert.That(population, Is.GreaterThan(0));
+        Assert.That(population, Is.EqualTo(expectedPopulation));
     }
 
     internal IEnumerator refresh()
     {
         return null;
+    }
+
+    internal void advanceTurn()
+    {
+        throw new NotImplementedException();
     }
 }
