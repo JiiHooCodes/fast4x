@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>D:\code\Unity\fast4x\Fast4XUnity\Assets\CoreDLL\</OutputPath>
+    <OutputPath>..\Fast4XUnity\Assets\CoreDLL\</OutputPath>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>

@@ -13,3 +13,15 @@ The project is currently split in to 3 parts (projects in Visual Studio):
 
 TODO: Describe game mechanics
 
+
+## Setup for Development
+
+Programs:
+* Microsoft Visual Studio Community 2019 (Version 16.10.4)
+* Unity (Version: 2020.3.15f2.723.3)
+
+Steps:
+* Open Visual Studio and open Fast4X.sln in the project's root folder
+* Build the solution (Menu: Build -> Build solution)
+* Open Unity and open the Fast4XUnity project
+* Start Playmode in Unity
