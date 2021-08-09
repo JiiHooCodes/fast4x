@@ -4,10 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <PackageId>Test</PackageId>
+
+    <AssemblyName>Fast4XTest</AssemblyName>
+
+    <RootNamespace>Fast4XTest</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.0">
@@ -17,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fast4XCore\Core.csproj" />
+    <ProjectReference Include="..\Fast4XCore\Fast4XCore.csproj" />
   </ItemGroup>
 
 </Project>

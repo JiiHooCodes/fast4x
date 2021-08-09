@@ -18,6 +18,8 @@
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <AssemblyName>Fast4XCore</AssemblyName>
+    <RootNamespace>Fast4XCore</RootNamespace>
   </PropertyGroup>
 
 </Project>
