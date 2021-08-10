@@ -656,7 +656,7 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-		<Reference Include="Fast4XCore">
+    <Reference Include="Fast4XCore">
       <HintPath>Assets\CoreDLL\Fast4XCore.dll</HintPath>
     </Reference>
   </ItemGroup>

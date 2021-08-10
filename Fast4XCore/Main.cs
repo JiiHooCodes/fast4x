@@ -10,5 +10,9 @@ namespace Fast4XCore
             planet = new Planet();
         }
 
+        public void nextTurn()
+        {
+            planet.AdvanceTurn();
+        }
     }
 }

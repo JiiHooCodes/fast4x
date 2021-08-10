@@ -13,22 +13,29 @@ public class AcceptanceTests
     public IEnumerator Setup()
     {
         game = new GameRunner();
-        game.start();
-        yield return game.refresh();
+        game.Start();
+        yield return game.Refresh();
     }
+    [TearDown]
+    public void TearDown()
+    {
+        game.End();
+    }
+
     [Test]
     public void WhenGameHasStartedThereIsAPlanetWithPopulation()
     {
-        game.hasAPlanetWithPopulation(20);
+        game.HasAPlanetWithPopulation(20);
     }
 
     [UnityTest]
     public IEnumerator OnTurn2PlanetsPopulationHasGrown()
     {
-        game.hasAPlanetWithPopulation(20);
-        game.advanceTurn();
-        yield return game.refresh();
+        game.HasAPlanetWithPopulation(20);
+        game.AdvanceTurn();
+        yield return game.Refresh();
 
-        game.hasAPlanetWithPopulation(20 + Mathf.Floor(1.6f)); // UI shows the population rounded down. 1.6 comes from the formula in Core.Planet
+        game.HasAPlanetWithPopulation((int)(Mathf.Floor(20 + 1.6f))); // UI shows the population rounded down. 1.6 comes from the formula in Core.Planet
     }
+
 }

@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fast4XCore;
 
 public class PlanetFactory
 {
-    public static GameObject createPlanet()
+    public static GameObject CreatePlanet(Planet planet)
     {
-        GameObject planet = new GameObject("planet");
-        PlanetData pd = planet.AddComponent<PlanetData>();
-        pd.setInitialPopulation(20);
-        return planet;
+        GameObject planetUI = new GameObject("planet");
+        PlanetData planetData = planetUI.AddComponent<PlanetData>();
+        planet.AddListener(planetData);
+        planetData.SetInitialPopulation(planet.GetPopulation());
+        return planetUI;
     }
 }

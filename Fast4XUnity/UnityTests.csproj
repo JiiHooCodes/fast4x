@@ -286,6 +286,9 @@
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Fast4XCore">
+      <HintPath>Assets\CoreDLL\Fast4XCore.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Program Files\Unity\2020.3.15f2\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
     </Reference>
