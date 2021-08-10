@@ -4,10 +4,12 @@ Fast4X is game inspired by the original Master of Orion game and its streamlined
 
 ## Project structure
 
-The project is currently split in to 3 parts (projects in Visual Studio):
-* Core is the main game logic, without UI. It creates a DLL of the game, for a UI implementation to use.
-* Assembly-CSharp is the [Unity](https://unity.com/) project, which is currently the only way to render the game.
-* Test contains the tests created during the TDD process for the Core.
+The project is currently split in to 4 parts (projects in Visual Studio):
+* Fast4XCore is the main game logic, without UI. It creates a DLL of the game, for a UI implementation to use.
+* Fast4XTest contains the tests created during the TDD process for the Fast4XCore.
+* UnityCode is the [Unity](https://unity.com/) project, which is currently the only way to render the game.
+* UnityTests contain acceptance tests, that can be run in Unity Test Runner.
+
 
 ## Game
 
@@ -17,8 +19,8 @@ TODO: Describe game mechanics
 ## Setup for Development
 
 Programs:
-* Microsoft Visual Studio Community 2019 (Version 16.10.4)
-* Unity (Version: 2020.3.15f2.723.3)
+* [Microsoft Visual Studio Community 2019](https://visualstudio.microsoft.com/vs/community/) (Version 16.10.4)
+* [Unity](https://store.unity.com/download-nuo) (Version: 2020.3.15f2.723.3)
 
 Steps:
 * Open Visual Studio and open Fast4X.sln in the project's root folder
