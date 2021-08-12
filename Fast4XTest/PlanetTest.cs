@@ -40,7 +40,7 @@ namespace Fast4XTest
 
             planet.AdvanceTurn();
 
-            listener.Received().Notify(2160);
+            listener.Received().Notify(21);
 
         }
     }

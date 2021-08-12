@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Fast4XCore;
 using System;
+
 
 public class UnityMain : MonoBehaviour
 {
@@ -16,8 +18,17 @@ public class UnityMain : MonoBehaviour
         {
             planetGameObject = PlanetFactory.CreatePlanet(game.planet);
         }
-        GameObject nextTurnButtonGO = new GameObject("NextTurnButton");
-        UnityEngine.UI.Button nextTurnButton = nextTurnButtonGO.AddComponent<UnityEngine.UI.Button>();
+
+        CreateUI();
+        
+    }
+
+    void CreateUI()
+    {
+        GameObject eventSystem = new GameObject("EventSystem", typeof(UnityEngine.EventSystems.EventSystem), typeof(UnityEngine.EventSystems.StandaloneInputModule));
+        
+        GameObject UI = Instantiate(Resources.Load<GameObject>("UI/UI_Canvas"));
+        Button nextTurnButton = UI.transform.GetChild(0).gameObject.GetComponent<Button>();
         nextTurnButton.onClick.AddListener(NextTurnClicked);
 
     }
