@@ -31,7 +31,11 @@ namespace Fast4XCore
             // growth formula: pop%MissingFromMax (* growthModifier) * pop  / 10, but at least 5, unless capped
             int growth = Math.Max((int)((1 - (population / (double)POPULATION_MAX)) * population / 10), 5);
             population += growth;
-            population = Math.Min(population, POPULATION_MAX);
+            if (population > POPULATION_MAX)
+            {
+                population = POPULATION_MAX;
+            }
+            
             NotifyChanges();
         }
 
