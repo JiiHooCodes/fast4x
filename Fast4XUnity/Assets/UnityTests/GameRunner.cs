@@ -37,7 +37,7 @@ internal class GameRunner
 
     internal void AdvanceTurn()
     {
-        GameObject NextTurnButtonGO = GameObject.Find("NextTurnButton");
+        GameObject NextTurnButtonGO = GameObject.Find("EndTurn_Button");
         UnityEngine.UI.Button button = NextTurnButtonGO.GetComponent<UnityEngine.UI.Button>();
         button.onClick.Invoke();
     }

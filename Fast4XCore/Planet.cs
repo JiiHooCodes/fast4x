@@ -19,8 +19,10 @@ namespace Fast4XCore
             population = 2000;
         }
 
-        public int GetPopulation() { return population; }
-        
+
+        public  int GetTruePopulation() { return population; }
+        public int GetPopulation() { return population/100; }
+
         public void AddListener(PlanetListener listener)
         {
             planetListeners.Add(listener);

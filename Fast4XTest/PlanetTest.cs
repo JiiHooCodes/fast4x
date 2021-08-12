@@ -18,7 +18,7 @@ namespace Fast4XTest
 
             planet.AdvanceTurn();
 
-            Assert.That(planet.GetPopulation(), Is.EqualTo(2160));
+            Assert.That(planet.GetTruePopulation(), Is.EqualTo(2160));
         }
 
         [Test]
@@ -28,7 +28,7 @@ namespace Fast4XTest
 
             planet.AdvanceTurn();
 
-            Assert.That(planet.GetPopulation(), Is.EqualTo(10000));
+            Assert.That(planet.GetTruePopulation(), Is.EqualTo(10000));
         }
 
         [Test]
