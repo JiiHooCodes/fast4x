@@ -12,6 +12,8 @@ public class PlanetFactory
         PlanetData planetData = planetUI.AddComponent<PlanetData>();
         planet.AddListener(planetData);
         planetData.SetInitialPopulation(planet.GetPopulation());
+        Coordinates coordinates = planet.getCoordinates();
+        planetData.transform.position = new Vector2(coordinates.x, coordinates.y);
         return planetUI;
     }
 }

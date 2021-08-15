@@ -5,19 +5,19 @@ namespace Fast4XTest
 {
     public class CoreMain
     {
+        Main game;
+
         [SetUp]
         public void Setup()
         {
+            game = new Main();
         }
 
         [Test]
-        public void SeeTheCoreCodeBase()
+        public void GameHasPlanets()
         {
-            if (new Main() != null)
-            {
-                Assert.Pass();
-            }
-
+            Assert.That(game.planets, Is.Not.Empty);
         }
+
     }
 }

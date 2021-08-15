@@ -45,4 +45,10 @@ public class AcceptanceTests
         game.HasAPlanetWithPopulation(0);
     }
 
+    [Test]
+    public void PlanetsHaveLocationAndTheyAreNotOnTopOfEachOther()
+    {
+        game.CheckNoOverlapOfPlanets();
+    }
+
 }

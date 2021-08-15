@@ -43,5 +43,14 @@ namespace Fast4XTest
             listener.Received().Notify(21);
 
         }
+
+        [Test]
+        public void PlanetHasLocation()
+        {
+            Planet planet = new Planet();
+            Coordinates coordinates = planet.getCoordinates();
+            Assert.That(coordinates.x, Is.GreaterThanOrEqualTo(0));
+            Assert.That(coordinates.y, Is.GreaterThanOrEqualTo(0));
+        }
     }
 }

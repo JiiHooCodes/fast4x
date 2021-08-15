@@ -8,8 +8,13 @@ namespace Fast4XCore
         public readonly List<Planet> planets = new List<Planet>();
         public Main()
         {
-            planets.Add(new Planet(2000));
-            planets.Add(new Planet(0));
+            CreatePlanets();
+        }
+
+        private void CreatePlanets()
+        {
+            planets.Add(new Planet(2000, new Coordinates(1, 1)));
+            planets.Add(new Planet(0, new Coordinates(2, 2)));
         }
 
         public void nextTurn()

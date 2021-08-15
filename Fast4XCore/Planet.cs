@@ -8,10 +8,12 @@ namespace Fast4XCore
         private int population;
         private static int POPULATION_MAX = 10000;
         private List<PlanetListener> planetListeners = new List<PlanetListener>();
+        private Coordinates coordinates;
 
-        public Planet(int startingPopulation)
+        public Planet(int startingPopulation, Coordinates coordinates = default)
         {
             population = startingPopulation;
+            this.coordinates = coordinates;
         }
 
         public Planet()
@@ -19,9 +21,9 @@ namespace Fast4XCore
             population = 2000;
         }
 
-
-        public  int GetTruePopulation() { return population; }
-        public int GetPopulation() { return population/100; }
+        public int GetTruePopulation() { return population; }
+        public int GetPopulation() { return population / 100; }
+        public Coordinates getCoordinates() { return coordinates; }
 
         public void AddListener(PlanetListener listener)
         {
@@ -37,7 +39,7 @@ namespace Fast4XCore
             {
                 population = POPULATION_MAX;
             }
-            
+
             NotifyChanges();
         }
 

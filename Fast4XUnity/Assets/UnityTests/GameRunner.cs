@@ -46,4 +46,21 @@ internal class GameRunner
         UnityEngine.UI.Button button = NextTurnButtonGO.GetComponent<UnityEngine.UI.Button>();
         button.onClick.Invoke();
     }
+
+    internal void CheckNoOverlapOfPlanets()
+    {
+        GameObject[] planets = GameObject.FindGameObjectsWithTag("planet");
+        Assert.That(planets, Is.Not.Empty);
+
+        foreach (GameObject planet in planets)
+        {
+            foreach (GameObject anotherPlanet in planets)
+            {
+                if(!planet.Equals(anotherPlanet))
+                {
+                    Assert.That(planet.transform.position, Is.Not.EqualTo(anotherPlanet.transform.position).Using(UnityEngine.TestTools.Utils.Vector3EqualityComparer.Instance));
+                }
+            }
+        }
+    }
 }
