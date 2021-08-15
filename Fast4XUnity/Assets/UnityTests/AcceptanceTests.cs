@@ -38,4 +38,11 @@ public class AcceptanceTests
         game.HasAPlanetWithPopulation((int)(Mathf.Floor(20 + 1.6f))); // UI shows the population rounded down. 1.6 comes from the formula in Core.Planet
     }
 
+    [Test]
+    public void WhenGameHasStartedThereAreMultiplePlanets()
+    {
+        game.HasAPlanetWithPopulation(20);
+        game.HasAPlanetWithPopulation(0);
+    }
+
 }

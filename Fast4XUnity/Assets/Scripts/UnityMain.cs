@@ -9,23 +9,23 @@ using System;
 public class UnityMain : MonoBehaviour
 {
     Main game;
-    GameObject planetGameObject;
+    List<GameObject> planetGameObjects = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
         game = new Main();
-        if (game.planet != null)
+        game.planets.ForEach(planet =>
         {
-            planetGameObject = PlanetFactory.CreatePlanet(game.planet);
-        }
+            planetGameObjects.Add(PlanetFactory.CreatePlanet(planet));
+        });
 
         CreateUI();
-        
+
     }
 
     void CreateUI()
     {
-        if(GameObject.Find("EventSystem") == null)
+        if (GameObject.Find("EventSystem") == null)
         {
             GameObject eventSystem = new GameObject("EventSystem", typeof(UnityEngine.EventSystems.EventSystem), typeof(UnityEngine.EventSystems.StandaloneInputModule));
 
@@ -38,13 +38,13 @@ public class UnityMain : MonoBehaviour
 
     public void Clear()
     {
-        Destroy(planetGameObject);
+        planetGameObjects.ForEach(planetGameObject => Destroy(planetGameObject));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void NextTurnClicked()

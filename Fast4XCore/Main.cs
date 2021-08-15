@@ -1,18 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Fast4XCore
 {
     public class Main
     {
-        public readonly Planet planet;
+        public readonly List<Planet> planets = new List<Planet>();
         public Main()
         {
-            planet = new Planet();
+            planets.Add(new Planet(2000));
+            planets.Add(new Planet(0));
         }
 
         public void nextTurn()
         {
-            planet.AdvanceTurn();
+            planets.ForEach(planet => planet.AdvanceTurn());
         }
     }
 }

@@ -21,14 +21,19 @@ internal class GameRunner
 
     internal void HasAPlanetWithPopulation(int expectedPopulation)
     {
-        GameObject planet = GameObject.Find("planet");
-        Assert.That(planet, Is.Not.Null);
+        GameObject[] planets = GameObject.FindGameObjectsWithTag("planet");
+        Assert.That(planets, Is.Not.Empty);
 
-        int population = planet.GetComponent<PlanetData>().GetPopulation();
-        Assert.That(population, Is.EqualTo(expectedPopulation));
+        foreach (GameObject planet in planets)
+        {
+            int population = planet.GetComponent<PlanetData>().GetPopulation();
+            if (expectedPopulation == population)
+            {
+                return;
+            }
+        }
+        Assert.Fail("Expected planet with population " + expectedPopulation + ",\nbut didn't find one.");
     }
-
-
 
     internal IEnumerator Refresh()
     {

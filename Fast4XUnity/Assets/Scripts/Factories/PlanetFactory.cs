@@ -8,6 +8,7 @@ public class PlanetFactory
     public static GameObject CreatePlanet(Planet planet)
     {
         GameObject planetUI = new GameObject("planet");
+        planetUI.tag = "planet";
         PlanetData planetData = planetUI.AddComponent<PlanetData>();
         planet.AddListener(planetData);
         planetData.SetInitialPopulation(planet.GetPopulation());
