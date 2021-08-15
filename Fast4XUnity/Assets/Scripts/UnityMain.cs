@@ -49,6 +49,6 @@ public class UnityMain : MonoBehaviour
 
     private void NextTurnClicked()
     {
-        game.nextTurn();
+        game.NextTurn();
     }
 }

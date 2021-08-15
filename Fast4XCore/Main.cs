@@ -17,7 +17,7 @@ namespace Fast4XCore
             planets.Add(new Planet(0, new Coordinates(2, 2)));
         }
 
-        public void nextTurn()
+        public void NextTurn()
         {
             planets.ForEach(planet => planet.AdvanceTurn());
         }
